@@ -1,1 +1,1 @@
-export default product => { type: 'ADD', product };
+export default () => ({ type: 'CLEAR' });

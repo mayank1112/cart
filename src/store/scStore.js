@@ -1,4 +1,10 @@
 import scReducer from '../reducers/scReducer';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-export default createStore(scReducer);
+const logger = store => next => action => {
+    console.log("dispatching", action);
+    next(action);
+};
+
+export default createStore(scReducer, applyMiddleware(thunk, logger));
