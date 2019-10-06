@@ -1,7 +1,6 @@
 {
   "name": "mm-cart",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "enzyme": "^3.10.0",
     "react": "^16.9.0",
